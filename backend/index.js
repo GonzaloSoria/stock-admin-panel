@@ -7,6 +7,7 @@ const routes = require('./routes/routes');
 const PORT = 4000;
 
 /*** middlewares ***/
+
 app.use(cors());
 app.use(express.json());
 
@@ -18,9 +19,13 @@ app.listen(PORT, (req, res) => {
     console.log(`The server is running at http://localhost:${PORT}/`);
 })
 
+/*** DB init ***/
+
 init_db();
 
-app.use('/items', routes)
+/*** API route ***/
+
+app.use('/api/items', routes)
 
 
 
