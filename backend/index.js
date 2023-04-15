@@ -25,10 +25,5 @@ init_db();
 
 /*** API route ***/
 
-app.use('/api/items', routes)
-
-
-
-module.exports = app;
-
+app.use('/api/items', routes);
 
